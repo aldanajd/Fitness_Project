@@ -11,7 +11,7 @@ pd.options.mode.chained_assignment = None
 #endregion
 
 #region Read
-df = pd.read_excel('/fitness_data.xlsx', engine='openpyxl')
+df = pd.read_excel('fitness_data.xlsx', engine='openpyxl')
 #endregion
 
 #region Preprocessing
