@@ -18,6 +18,9 @@ df = pd.read_csv('fitness_data.csv')
 ##Fill nulls with previous value
 df.fillna(method='ffill', inplace=True)
 
+##Convert Date
+df['date'] = pd.to_datetime(df['date'])
+
 ##Today's Date
 date_now = datetime.now().date()
 
