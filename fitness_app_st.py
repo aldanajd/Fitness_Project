@@ -99,7 +99,7 @@ else:
 #endregion
 
 #region Tabs
-tab1, tab2, tab3 = st.tabs(["Timeline", "% Difference from Start", "Difference from Previous Value"])
+tab1, tab2, tab3 = st.tabs(["Timeline", "Difference from Start", "Difference from Previous Value"])
 
 with tab1:
     x = df1['date']
@@ -117,8 +117,8 @@ with tab1:
     fig = make_subplots(rows=2, cols=1,
                         shared_xaxes=True,
                         vertical_spacing=0.07,
-                        subplot_titles=['Weight Timeline', 
-                        'Fat Timeline'])
+                        subplot_titles=['Weight(Kg) - Timeline', 
+                        'Fat(%) - Timeline'])
 
     ##Weight
     fig.add_trace(go.Scatter(x=x, y=y1, name='Johanna', line={'color':'orange'}),
@@ -167,8 +167,8 @@ with tab2:
     fig = make_subplots(rows=2, cols=1,
                         shared_xaxes=True,
                         vertical_spacing=0.07,
-                        subplot_titles=['Weight % Difference from Start', 
-                        'Fat % Difference from Start'])
+                        subplot_titles=['Weight(%) - Difference from Start', 
+                        'Fat(%) - Difference from Start'])
 
     ##Weight
     fig.add_trace(go.Scatter(x=x, y=y1, name='Johanna', line={'color':'orange'}),
@@ -217,8 +217,8 @@ with tab3:
     fig = make_subplots(rows=2, cols=1,
                         shared_xaxes=True,
                         vertical_spacing=0.07,
-                        subplot_titles=['Weight % Difference from Previous', 
-                        'Fat % Difference from Previous'])
+                        subplot_titles=['Weight(%) - Difference from Previous Value', 
+                        'Fat(%) - Difference from Previous Value'])
 
     ##Weight
     fig.add_trace(go.Scatter(x=x, y=y1, name='Johanna', line={'color':'orange'}),
@@ -296,9 +296,9 @@ y_4 = df1['michael_weight_%diff']
 fig = make_subplots(rows=3, cols=1,
                     shared_xaxes=True,
                     vertical_spacing=0.05,
-                    subplot_titles=['Weight Timeline', 
-                    'Weight % Difference from Start',
-                    'Weight % Difference from Previous Value'])
+                    subplot_titles=['Weight(Kg) - Timeline', 
+                    'Weight(%) - Difference from Start',
+                    'Weight(%) - Difference from Previous Value'])
 
 ##Weight
 fig.add_trace(go.Scatter(x=x, y=y1, name='Johanna', line={'color':'orange'}),
@@ -376,9 +376,9 @@ y_4 = df1['michael_fat_%diff']
 fig = make_subplots(rows=3, cols=1,
                     shared_xaxes=True,
                     vertical_spacing=0.05,
-                    subplot_titles=['Fat % Timeline', 
-                    'Fat % Difference from Start',
-                    'Fat % Difference from Previous Value'])
+                    subplot_titles=['Fat(%) - Timeline', 
+                    'Fat(%) - Difference from Start',
+                    'Fat(%) - Difference from Previous Value'])
 
 ##Fat
 fig.add_trace(go.Scatter(x=x, y=y1, name='Johanna', line={'color':'orange'}),
