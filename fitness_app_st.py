@@ -377,8 +377,8 @@ fig = make_subplots(rows=3, cols=1,
                     shared_xaxes=True,
                     vertical_spacing=0.05,
                     subplot_titles=['Fat(%) - Timeline', 
-                    'Fat(%) - Difference from Start',
-                    'Fat(%) - Difference from Previous Value'])
+                    'Fat(%) - Progress since the Beginning',
+                    'Fat(%) - Progress since Previous Day'])
 
 ##Fat
 fig.add_trace(go.Scatter(x=x, y=y1, name='Johanna', line={'color':'orange'}),
