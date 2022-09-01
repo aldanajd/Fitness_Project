@@ -248,28 +248,6 @@ with tab3:
 
     fig.update_layout(height=500, width=800, hovermode='x unified')
 
-    fig.add_shape(type='line', 
-            x0=x.iloc[1,], 
-            y0=0, 
-            x1=x.iloc[-1,], 
-            y1=0, 
-            line=dict(color='brown'),
-            xref='x', 
-            yref='y', 
-            row=1, 
-            col=1)    
-
-    fig.add_shape(type='line', 
-            x0=x.iloc[1,], 
-            y0=0, 
-            x1=x.iloc[-1,], 
-            y1=0, 
-            line=dict(color='brown'),
-            xref='x', 
-            yref='y', 
-            row=2, 
-            col=1)
-
     ##Graph
     st.plotly_chart(fig, use_container_width=True)
 #endregion
@@ -339,17 +317,6 @@ fig.add_trace(go.Scatter(x=x, y=y_3, name='Laura', line={'color':'aqua'}, showle
 fig.add_trace(go.Scatter(x=x, y=y_4, name='Michael', line={'color':'green'}, showlegend=False),
             row=3, col=1)              
 
-fig.add_shape(type='line', 
-            x0=x.iloc[1,], 
-            y0=0, 
-            x1=x.iloc[-1,], 
-            y1=0, 
-            line=dict(color='black'),
-            xref='x', 
-            yref='y', 
-            row=3, 
-            col=1)
-
 fig.update_layout(height=800, width=800, hovermode='x unified')
 
 ##Graph
@@ -418,17 +385,6 @@ fig.add_trace(go.Scatter(x=x, y=y_3, name='Laura', line={'color':'aqua'}, showle
 
 fig.add_trace(go.Scatter(x=x, y=y_4, name='Michael', line={'color':'green'}, showlegend=False),
             row=3, col=1)              
-
-fig.add_shape(type='line', 
-            x0=x.iloc[1,], 
-            y0=0, 
-            x1=x.iloc[-1,], 
-            y1=0, 
-            line=dict(color='black',),
-            xref='x', 
-            yref='y', 
-            row=3, 
-            col=1)
 
 fig.update_layout(height=800, width=800, hovermode='x unified')
 
