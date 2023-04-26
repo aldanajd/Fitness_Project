@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 
 #Load the pre-trained model
-classifier_model = load_model('/app/clothing_classification/Model')
+classifier_model = load_model('/app/fitness_project/model')
 
 #Define the categories to match the output of the pre-trained model
 classifier_dictionary = {
